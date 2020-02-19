@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Дипломный проект</title>
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+		<link rel="stylesheet" type="text/css" href="css/sprite.css">
+		<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="preload" href="fonts/Roboto/RobotoBlack/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Roboto/RobotoRegular/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Roboto/RobotoBold/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
+		<link rel="icon" type="image/ico" sizes="16x16" href="img/favicon.ico">
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+<!-- Хедер -->
+		<header class="header">
+			<div class="wrap">
+				<div class="flex">
+					<div class="menu-button hidden">
+						<input  id="menu__toggle" type="checkbox"/>
+						<label class="header-menu__button" for="menu__toggle">
+							<span></span>
+						</label>
+					</div>
+					<nav class="header-menu">
+						<ul class="nav-list">
+							<li>
+								<a class="link nav-list__link" href="#">Услуги</a>
+							</li>
+							<li>
+								<a class="link nav-list__link" href="#">Портфолио</a>
+							</li>
+							<li>
+								<a class="link nav-list__link" href="#">Стоимость</a>
+							</li>
+						</ul>
+          			</nav>          
+					<address class="header-phone">
+						<a class="link header-phone__link" href="tel:+74999955577">+7(499) 995-55-77</a>
+						<button class="btn header-button__telefon" aria-label="close">Заказать звонок</button>
+					</address>
+					  
+					<address class="header-mobile hidden">
+						<div class="menu-button-mobile">
+							<input  id="menu__toggle2" type="checkbox"/>
+							<label class="header-menu__button-mobile" for="menu__toggle2">
+								<span></span>
+							</label>
+						</div>
+						<a class=" link header-mobile__link" href="tel:+74999955577">+7(499) 995-55-77</a>
+						<button class="btn header-mobile__bell-button" aria-label="close">
+							<i class="fa fa-phone"></i>
+						</button>
+					  </address>
+					  <nav class="header-mobile-menu hidden">
+						<ul class="mobile-nav-list">
+							<li>
+								<a class="link mobile-nav-list__link" href="#">Услуги</a>
+							</li>
+							<li>
+								<a class="link mobile-nav-list__link" href="#">Портфолио</a>
+							</li>
+							<li>
+								<a class="link mobile-nav-list__link" href="#">Стоимость</a>
+							</li>
+						</ul>
+          			</nav>           
+				</div>
+			</div>
+		</header>
+<!-- Основная часть -->
+		<main class="main">
+			<section class="foto-section">
+				<div class="foto-section__ellipse">
+				  	<svg width="774" height="665" viewBox="0 0 814 630">
+						<defs>
+					  		<linearGradient id="gradient" x1="371.97" x2="548.51" y1="763.68" y2=".74" gradientUnits="userSpaceOnUse">
+								<stop offset="0" stop-color="#ff8f5a"/>
+
+								<stop offset=".99" stop-color="#ff2f96"/>
+
+								<stop offset="1" stop-color="#ff2f96"/>
+					  		</linearGradient>
+						</defs>
+						<path fill="url(#gradient)" d="M395.52 40.407C502.261-10.05 602.994-10.204 687.212 27.67c84.435 37.567 152.356 113.165 198.491 207.114 44.27 94.884 44.223 196.799 8.068 279.242-36.656 83.673-97.666 146.755-180.805 191.777-44.03 22.669-90.312 38.198-149.148 47.731-58.06 9.394-128.676 12.79-203.493 7.944-148.474-9.32-314.876-53.081-349.967-151.79-19.887-49.012-7.404-105.197 17.32-161.739 25.13-56.624 62.503-113.604 101.74-166.115 39.645-52.593 81.155-100.717 123.891-141.53C296.45 99.41 340.817 65.828 395.52 40.408z"/>
+				  	</svg>
+				</div>
+				<div class="title-container">
+				 	<figure class="foto-wrap">
+						<div class="foto-block">
+					  		<img class="foto-block__shadow" src="img/siluet.png" alt="Думин Вячеслав | Frontend-разработчик и веб-верстальщик">
+						</div>
+						<figcaption class="foto-text">
+							<hgroup class="foto-hgroup">
+								<h1 class="title">Вячеслав Думин</h1>
+								<h2 class="subtitle">Frontend-разработчик и веб-верстальщик</h2>
+							</hgroup>
+							<button class="btn red-button" aria-label="close">Узнать больше</button>
+						</figcaption>
+				 	</figure>
+        		</div>
+        		<span class="foto-section__number-sign">&#35;</span>
+				<span class="foto-section__braces">{ }</span>
+				<span class="foto-section__div">&lt;div&gt;</span>
+				<span class="foto-section__div-2">&lt;div&gt;</span>
+				<span class="foto-section__slash">&lt;&#47;&gt;</span>
+				<span class="foto-section__slash-2 hidden">&lt;&#47;&gt;</span>
+			</section>
+			
+			<section class="foto-mobile-section hidden">
+				<hgroup class="foto-mobile-section__hgroup">
+					<h1 class="foto-mobile-section__title">Вячеслав Думин</h1>
+					<h2 class="foto-mobile-section__subtitle">Frontend-разработчик и веб-верстальщик</h2>
+				</hgroup>
+				<button class="btn red-button" aria-label="close">Узнать больше</button>
+			</section>
+
+			<section class="skils-section">
+				<div class="wrap">
+					<div class="heading">
+						<h3 class="heading__title">Что я делаю</h3>
+					</div>
+					<ul class="block-skils">
+						<li class="box-skils">
+							<article>
+								<img class="box-skils__img" src="img/tools-and-utensils.png" alt="" title="">
+								<h4 class="box-skils__title">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</h4>
+							</article>
+						</li>
+						<li class="box-skils">
+							<article>
+								<img class="box-skils__img" src="img/responsive.png" alt="" title="">
+								<h4 class="box-skils__title">Адаптивная вёрстка под все браузеры и&nbsp;устройства</h4>
+							</article>
+						</li>
+						<li class="box-skils">
+							<article>
+								<img class="box-skils__img" src="img/programming.png" alt="" title="">
+								<h4 class="box-skils__title">Frontend-разработка и&nbsp;программирование</h4>
+							</article>
+						</li>
+						<li class="box-skils">
+							<article>
+								<img class="box-skils__img" src="img/coding.png" alt="" title="">
+								<h4 class="box-skils__title">Исправление и&nbsp;доработка существующей вёрстки</h4>
+							</article>
+						</li>
+					</ul>
+					<div class="skils-section__cost">
+						<button class="btn red-button" aria-label="close">Узнать стоимость</button>
+					</div>
+				</div>
+      		</section>
+      
+			<section class="project-section">
+				<div class="wrap">
+					<div class="heading">
+						<h3 class="heading__title">Примеры моих работ</h3>
+					</div>
+          			<div class="project-carousel">
+						<div class="block-carousel">
+							<div class="icons">
+								<article class="slide">
+									<img class="slide__img" src="img/Layer2.png" alt="" title="">
+									<h4 class="slide-title">
+										<a class="slide-title__link" href="#">Сайт психолога Веры Антоновой</a>
+									</h4>
+								</article>                 
+								<article class="slide">
+									<img class="slide__img" src="img/Layer1.png" alt="" title="">
+									<h4 class="slide-title">
+										<a class="slide-title__link" href="#">Сайт магазина детской одежды</a>
+									</h4>
+								</article>                
+								<article class="slide">
+									<img class="slide__img" src="img/Layer3.png" alt="" title="">
+									<h4 class="slide-title">
+										<a class="slide-title__link" href="#">Сайт магазина &laquo;Рыболов&raquo;</a>
+									</h4>
+								</article>									
+							</div>
+						</div>			
+						<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> 
+						<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+          			</div>					  
+					<div class="project-slider hidden">
+            			<div class="slider">
+							<input type="radio" name="switch" id="btn1" checked>
+							<input type="radio" name="switch" id="btn2">
+							<input type="radio" name="switch" id="btn3">              
+							<div class="switch">
+								<label for="btn1"></label>
+								<label for="btn2"></label>
+								<label for="btn3"></label>
+							</div>
+							<div class="slider-inner">
+								<div class="slides">
+									<article class="slide-mob">
+										<img class="slide__img" src="img/Layer2.png" alt="" title="">
+										<h4 class="slide-title">
+											<a class="slide-title__link" href="#">Сайт психолога Веры Антоновой</a>
+										</h4>
+									</article>
+									<article class="slide-mob">
+										<img class="slide__img" src="img/Layer1.png" alt="" title="">
+										<h4 class="slide-title">
+											<a class="slide-title__link" href="#">Сайт магазина детской одежды</a>
+										</h4>
+									</article>
+									<article class="slide-mob">
+										<img class="slide__img" src="img/Layer3.png" alt="" title="">
+										<h4 class="slide-title">
+											<a class="slide-title__link" href="#">Сайт магазина &laquo;Рыболов&raquo;</a>
+										</h4>
+									</article>
+								</div>
+							</div>						
+            			</div>
+          			</div>
+					<div class="project-section__button">
+						<button class="btn red-button" aria-label="close">Заказать проект</button>
+					</div>
+				</div>
+			</section>
+			<section class="adaptiv-section">
+				<div class="wrap">
+					<div class="adaptiv-text">
+						<h2 class="adaptiv-text__text">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
+					</div>
+					<div class="adaptiv-footnote">
+						<p class="adaptiv-footnote__text">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;расчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</p>
+					</div>
+				</div>
+				<span class="adaptiv-sign__number-sign">&#35;</span>
+				<span class="adaptiv-sign__braces">{ }</span>
+				<span class="adaptiv-sign__braces2">{ }</span>
+				<span class="adaptiv-sign__div">&lt;div&gt;</span>
+				<span class="adaptiv-sign__slash">&lt;&#47;&gt;</span>
+			</section>
+		</main>
+		<footer>
+			<div class="footer-top">
+				<div class="wrap">
+					<div class="footer-desktop">
+						<div class="flex footer-flex">
+							<nav class="footer-menu">
+								<ul>
+									<li class="footer-item">
+										<a class="footer-item__link" href="#">Услуги</a>
+									</li>
+									<li class="footer-item">
+										<a class="footer-item__link" href="#">Портфолио</a>
+									</li>
+									<li class="footer-item">
+										<a class="footer-item__link" href="#">Стоимость</a>
+									</li>
+								</ul>
+							</nav>
+							<address class="footer-contact">
+								<div class="footer-phone">
+									<i class="fa fa-phone"></i>
+									<a class="footer-phone__link" href="tel:+74999955577">+7(499) 995-55-77</a>
+								</div>
+								<div class="footer-mail">
+									<i class="fas fa-envelope"></i>
+									<a class="footer-mail__link" href="">info@agency.ru</a>
+								</div>
+							</address>
+							<div class="footer-network">
+								<button class="btn footer-telefon-button" aria-label="close">Заказать звонок</button>
+								<ul class="socials">
+									<li class="socials-item">
+										<a href="https://vk.com/feed" class="link sprite vk"></a>
+									</li>
+									<li class="socials-item">
+										<a href="https://ru-ru.facebook.com/" class="link sprite facebook-logo"></a>
+									</li>
+									<li class="socials-item">
+										<a href="https://twitter.com/?lang=ru" class="link sprite twitter-logo-silhouette"></a>
+									</li>
+									<li class="socials-item">
+										<a href="https://www.instagram.com/?hl=ru" class="link sprite instagram-social"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p class="footer-bottom__text">&copy;&nbsp;Вячеслав&nbsp;Думин,&nbsp;2019&nbsp;-&nbsp;2020</p>
+			</div>
+		</footer>
+		<script src="js/carousel.js"></script>
+		<script src="js/menu-button.js"></script>
+	</body>
+</html>

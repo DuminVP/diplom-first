@@ -1,0 +1,95 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #fbfbfb; 
+}
+
+.wrap {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    outline: 0!important; /*внешняя граница элемента*/
+    outline-color: transparent!important; /*цвет линии*/
+    outline-width: 0!important; /*толщина границы*/
+    outline-style: none!important; /*стил линии*/
+    box-shadow: none; /*тень элемента*/
+    cursor: pointer; /*изменение курсора*/
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list__link {
+    font-family: "Roboto";
+    font-weight: normal;
+	font-style: normal;
+    font-size: 16px;
+    color: #1f1f24;
+    margin-right: 30px;
+}
+
+.nav-list__link:hover {
+    color: #fc557c;
+}
+
+.header-phone__link {
+    font-family: "Roboto";
+	font-weight: bold;
+	font-style: normal;
+    font-size: 25px;
+    color: #1f1f24;
+    margin-right: 22px;
+}
+
+.header-phone__link:hover {
+    color: #fc557c;
+}
+
+.header-button__telefon {
+    font-family: "Roboto";
+	font-weight: normal;
+	font-style: normal;
+    font-size: 16px;
+    color: rgb(248, 35, 112);
+    border-width: 1px;
+    border-color: rgb(248, 35, 112);
+    border-style: solid;
+    width: 207px;
+    height: 44px;
+    background-color: #fbfbfb;
+    transition: all 500ms ease; /*динамический переход*/
+    white-space: nowrap; /*отображение пробелов между словами*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*цвет подсветки ссылки*/
+}
+
+.header-button__telefon:-moz-focus-inner { /*убираем рамку с элементов в фокусе*/
+    border: 0;
+}
+
+.header-button__telefon:hover {
+    background: rgba(0,0,0,0);
+    color: #fbfbfb;;
+    background-image: -moz-linear-gradient( 77deg, rgb(255,143,90) 10%, rgb(255,47,150) 90%);
+    background-image: -webkit-linear-gradient( 77deg, rgb(255,143,90) 10%, rgb(255,47,150) 90%);
+    background-image: -ms-linear-gradient( 77deg, rgb(255,143,90) 10%, rgb(255,47,150) 90%);
+}
+
+.header-button__telefon:disabled { /*заблокированные элементы форм*/
+    cursor: default;
+    opacity: 1; /*прозрачность элемента*/
+    user-select: none; /*запрещено выделять элемент*/
+}
+
+.hidden {
+	display: none;
+} 
+

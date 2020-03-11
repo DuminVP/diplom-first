@@ -5,13 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Дипломный проект</title>
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/header.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link rel="stylesheet" type="text/css" href="css/libs.css">
+		<link rel="stylesheet" type="text/css" href="css/libs.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/media.css">
+		<link rel="stylesheet" type="text/css" href="css/modal.css">
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css">
+		<link rel="stylesheet" type="text/css" href="css/slick2.css">
 		<link rel="stylesheet" type="text/css" href="css/sprite.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 		<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="preload" href="fonts/Roboto/RobotoBlack/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
@@ -20,8 +26,9 @@
 		<link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
 		<link rel="icon" type="image/ico" sizes="16x16" href="img/favicon.ico">
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+		<script src="js/jquery-3.4.1.min.js"></script>       
+		<script src="js/jquery.min.js"></script>
 	</head>
 	<body>
 <!-- Хедер -->
@@ -30,26 +37,26 @@
 				<div class="flex">
 					<div class="menu-button hidden">
 						<input  id="menu__toggle" type="checkbox"/>
-						<label class="header-menu__button" for="menu__toggle">
+						<label class="header-menu__button" for="menu__toggle" aria-label="Menu">
 							<span></span>
 						</label>
 					</div>
 					<nav class="header-menu">
 						<ul class="nav-list">
 							<li>
-								<a class="link nav-list__link" href="#">Услуги</a>
+								<a class="link nav-list__link" href="#" title="Services">Услуги</a>
 							</li>
 							<li>
-								<a class="link nav-list__link" href="#">Портфолио</a>
+								<a class="link nav-list__link" href="#" title="Portfolio">Портфолио</a>
 							</li>
 							<li>
-								<a class="link nav-list__link" href="#">Стоимость</a>
+								<a class="link nav-list__link" href="#" title="Cost">Стоимость</a>
 							</li>
 						</ul>
           			</nav>          
 					<address class="header-phone">
-						<a class="link header-phone__link" href="tel:+74999955577">+7(499) 995-55-77</a>
-						<button class="btn header-button__telefon" aria-label="close">Заказать звонок</button>
+						<a class="link header-phone__link" href="tel:+74999955577" title="Telephone">+7(499) 995-55-77</a>
+						<button class="btn header-button__telefon js-open-modal" aria-label="Request a call" data-modal="1">Заказать звонок</button>
 					</address>
 					  
 					<address class="header-mobile hidden">
@@ -59,25 +66,60 @@
 								<span></span>
 							</label>
 						</div>
-						<a class=" link header-mobile__link" href="tel:+74999955577">+7(499) 995-55-77</a>
-						<button class="btn header-mobile__bell-button" aria-label="close">
+						<a class=" link header-mobile__link" href="tel:+74999955577" title="Telephone">+7(499) 995-55-77</a>
+						<button class="btn header-mobile__bell-button js-open-modal" aria-label="Request a call" data-modal="1">
 							<i class="fa fa-phone"></i>
 						</button>
-					  </address>
-					  <nav class="header-mobile-menu hidden">
+					</address>
+					<nav class="header-mobile-menu hidden">
 						<ul class="mobile-nav-list">
 							<li>
-								<a class="link mobile-nav-list__link" href="#">Услуги</a>
+								<a class="link mobile-nav-list__link" href="#" title="Services">Услуги</a>
 							</li>
 							<li>
-								<a class="link mobile-nav-list__link" href="#">Портфолио</a>
+								<a class="link mobile-nav-list__link" href="#" title="Portfolio">Портфолио</a>
 							</li>
 							<li>
-								<a class="link mobile-nav-list__link" href="#">Стоимость</a>
+								<a class="link mobile-nav-list__link" href="#" title="Cost">Стоимость</a>
 							</li>
 						</ul>
           			</nav>           
 				</div>
+			</div>
+
+			<div>
+				<div class="modal" data-modal="1">
+					<span class="header-menu__button_cross modal__cross js-modal-close close1" aria-label="Close"></span>
+					<p class="modal_title">Заказать звонок!</p>
+					<p class="modal_subtitle">Оставьте заявку и я свяжусь с вами в ближайшее время</p> 
+					<form class="form_modal_window" action="#">
+						<input class="modal__name" type="text" name="name" placeholder="Ваше имя" aria-label="Your name" required>
+						<input class="modal__phone" name="phone" placeholder="Ваш телефон" aria-label="Your phone number" required>
+						<input class="btn header-button__telefon" name="sub" type="submit" value="Отправить" aria-label="Send">
+					</form>
+					<span class="foto-section__number-sign_modal">&#35;</span>
+					<span class="foto-section__braces_modal">{ }</span>
+					<span class="foto-section__div_modal">&lt;div&gt;</span>
+					<span class="foto-section__slash_modal">&lt;&#47;&gt;</span>
+				</div>
+
+				<div class="modal" data-modal="2">
+					<span class="header-menu__button_cross modal__cross js-modal-close close1"></span>
+					<p class="modal_title">Узнать больше!</p>
+					<p class="modal_subtitle">Оставьте заявку и я свяжусь с вами в ближайшее время</p> 
+					<form class="form_modal_window" action="#">
+						<input class="modal__name_2" type="text" name="name" placeholder="Ваше имя" aria-label="Your name" required>
+						<input class="modal__email_2" type="email" name="email" placeholder="Ваш email" aria-label="Your email" required>
+						<input class="modal__phone_2" name="phone" placeholder="Ваш телефон" aria-label="Your phone number" required>
+						<input class="btn red-button" name="sub" type="submit" value="Отправить" aria-label="Send">
+					</form>
+					<span class="foto-section__number-sign_modal">&#35;</span>
+					<span class="foto-section__braces_modal">{ }</span>
+					<span class="foto-section__div_modal">&lt;div&gt;</span>
+					<span class="foto-section__slash_modal">&lt;&#47;&gt;</span>
+				</div>
+				<!-- Подложка под модальным окном -->
+				<div class="overlay js-overlay-modal"></div>
 			</div>
 		</header>
 <!-- Основная часть -->
@@ -107,7 +149,7 @@
 								<h1 class="title">Вячеслав Думин</h1>
 								<h2 class="subtitle">Frontend-разработчик и веб-верстальщик</h2>
 							</hgroup>
-							<button class="btn red-button" aria-label="close">Узнать больше</button>
+							<button class="btn red-button js-open-modal" aria-label="To learn more" data-modal="2">Узнать больше</button>
 						</figcaption>
 				 	</figure>
         		</div>
@@ -124,7 +166,7 @@
 					<h1 class="foto-mobile-section__title">Вячеслав Думин</h1>
 					<h2 class="foto-mobile-section__subtitle">Frontend-разработчик и веб-верстальщик</h2>
 				</hgroup>
-				<button class="btn red-button" aria-label="close">Узнать больше</button>
+				<button class="btn red-button js-open-modal" aria-label="To learn more" data-modal="2">Узнать больше</button>
 			</section>
 
 			<section class="skils-section">
@@ -159,7 +201,7 @@
 						</li>
 					</ul>
 					<div class="skils-section__cost">
-						<button class="btn red-button" aria-label="close">Узнать стоимость</button>
+						<button class="btn red-button js-open-modal" aria-label="Find out the cost" data-modal="2">Узнать стоимость</button>
 					</div>
 				</div>
       		</section>
@@ -175,65 +217,30 @@
 								<article class="slide">
 									<img class="slide__img" src="img/Layer2.png" alt="" title="">
 									<h4 class="slide-title">
-										<a class="slide-title__link" href="#">Сайт психолога Веры Антоновой</a>
+										<a class="slide-title__link" href="#" title="Site of psychologist Vera Antonova">Сайт психолога Веры Антоновой</a>
 									</h4>
 								</article>                 
 								<article class="slide">
 									<img class="slide__img" src="img/Layer1.png" alt="" title="">
 									<h4 class="slide-title">
-										<a class="slide-title__link" href="#">Сайт магазина детской одежды</a>
+										<a class="slide-title__link" href="#" title="Children's clothing store website">Сайт магазина детской одежды</a>
 									</h4>
 								</article>                
 								<article class="slide">
 									<img class="slide__img" src="img/Layer3.png" alt="" title="">
 									<h4 class="slide-title">
-										<a class="slide-title__link" href="#">Сайт магазина &laquo;Рыболов&raquo;</a>
+										<a class="slide-title__link" href="#" title="Store website">Сайт магазина &laquo;Рыболов&raquo;</a>
 									</h4>
 								</article>									
 							</div>
 						</div>			
-						<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> 
-						<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
           			</div>					  
-					<div class="project-slider hidden">
-            			<div class="slider">
-							<input type="radio" name="switch" id="btn1" checked>
-							<input type="radio" name="switch" id="btn2">
-							<input type="radio" name="switch" id="btn3">              
-							<div class="switch">
-								<label for="btn1"></label>
-								<label for="btn2"></label>
-								<label for="btn3"></label>
-							</div>
-							<div class="slider-inner">
-								<div class="slides">
-									<article class="slide-mob">
-										<img class="slide__img" src="img/Layer2.png" alt="" title="">
-										<h4 class="slide-title">
-											<a class="slide-title__link" href="#">Сайт психолога Веры Антоновой</a>
-										</h4>
-									</article>
-									<article class="slide-mob">
-										<img class="slide__img" src="img/Layer1.png" alt="" title="">
-										<h4 class="slide-title">
-											<a class="slide-title__link" href="#">Сайт магазина детской одежды</a>
-										</h4>
-									</article>
-									<article class="slide-mob">
-										<img class="slide__img" src="img/Layer3.png" alt="" title="">
-										<h4 class="slide-title">
-											<a class="slide-title__link" href="#">Сайт магазина &laquo;Рыболов&raquo;</a>
-										</h4>
-									</article>
-								</div>
-							</div>						
-            			</div>
-          			</div>
 					<div class="project-section__button">
-						<button class="btn red-button" aria-label="close">Заказать проект</button>
+						<button class="btn red-button js-open-modal" aria-label="Order a project" data-modal="2">Заказать проект</button>
 					</div>
 				</div>
 			</section>
+
 			<section class="adaptiv-section">
 				<div class="wrap">
 					<div class="adaptiv-text">
@@ -258,40 +265,40 @@
 							<nav class="footer-menu">
 								<ul>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#">Услуги</a>
+										<a class="footer-item__link" href="#" title="Services">Услуги</a>
 									</li>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#">Портфолио</a>
+										<a class="footer-item__link" href="#" title="Portfolio">Портфолио</a>
 									</li>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#">Стоимость</a>
+										<a class="footer-item__link" href="#" title="Cost">Стоимость</a>
 									</li>
 								</ul>
 							</nav>
 							<address class="footer-contact">
 								<div class="footer-phone">
 									<i class="fa fa-phone"></i>
-									<a class="footer-phone__link" href="tel:+74999955577">+7(499) 995-55-77</a>
+									<a class="footer-phone__link" href="tel:+74999955577" title="Telephone">+7(499) 995-55-77</a>
 								</div>
 								<div class="footer-mail">
 									<i class="fas fa-envelope"></i>
-									<a class="footer-mail__link" href="">info@agency.ru</a>
+									<a class="footer-mail__link" href="" title="Email">info@agency.ru</a>
 								</div>
 							</address>
 							<div class="footer-network">
-								<button class="btn footer-telefon-button" aria-label="close">Заказать звонок</button>
+								<button class="btn footer-telefon-button js-open-modal" aria-label="Request a call" data-modal="1">Заказать звонок</button>
 								<ul class="socials">
 									<li class="socials-item">
-										<a href="https://vk.com/feed" class="link sprite vk"></a>
+										<a href="https://vk.com/feed" class="link sprite vk" aria-lebel="vkontakte"></a>
 									</li>
 									<li class="socials-item">
-										<a href="https://ru-ru.facebook.com/" class="link sprite facebook-logo"></a>
+										<a href="https://ru-ru.facebook.com/" class="link sprite facebook-logo" aria-lebel="facebook"></a>
 									</li>
 									<li class="socials-item">
-										<a href="https://twitter.com/?lang=ru" class="link sprite twitter-logo-silhouette"></a>
+										<a href="https://twitter.com/?lang=ru" class="link sprite twitter-logo-silhouette" aria-lebel="twitter"></a>
 									</li>
 									<li class="socials-item">
-										<a href="https://www.instagram.com/?hl=ru" class="link sprite instagram-social"></a>
+										<a href="https://www.instagram.com/?hl=ru" class="link sprite instagram-social" aria-lebel="instagram"></a>
 									</li>
 								</ul>
 							</div>
@@ -301,9 +308,11 @@
 			</div>
 			<div class="footer-bottom">
 				<p class="footer-bottom__text">&copy;&nbsp;Вячеслав&nbsp;Думин,&nbsp;2019&nbsp;-&nbsp;2020</p>
-			</div>
+			</div>			
 		</footer>
-		<script src="js/carousel.js"></script>
 		<script src="js/menu-button.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/slick.js"></script>
+		<script src="js/slick.min.js"></script>	
 	</body>
 </html>

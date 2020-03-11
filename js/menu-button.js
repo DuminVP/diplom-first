@@ -9,9 +9,8 @@ btn.click(function() {
     btn.toggleClass('close');
 });
 
-/* заменяет иконку на кнопке малой*/
+/* меню при нажатии кнопки малой*/
 btn2.click(function() {
     menu.slideToggle();
     btn2.toggleClass('close');
 });
-

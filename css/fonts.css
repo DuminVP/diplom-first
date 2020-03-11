@@ -1,36 +1,32 @@
-@font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/RobotoBold/Roboto-Bold.woff') format('woff'),
-		 url('../fonts/Roboto/RobotoBold/Roboto-Bold.woff2') format('woff2'); 
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
+font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/RobotoBold/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto/RobotoBold/Roboto-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
 
-@font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/RobotoMedium/Roboto-Medium.woff') format('woff'),
-		 url('../fonts/Roboto/RobotoMedium/Roboto-Medium.woff2') format('woff2'); 
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
+font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/RobotoMedium/Roboto-Medium.woff") format("woff");
+  src: url("../fonts/Roboto/RobotoMedium/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
 
-@font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/RobotoBlack/Roboto-Black.woff') format('woff'),
-		 url('../fonts/Roboto/RobotoBlack/Roboto-Black.woff2') format('woff2'); 
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-  
-@font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/RobotoRegular/Roboto-Regular.woff') format('woff'),
-		 url('../fonts/Roboto/RobotoRegular/Roboto-Regular.woff2') format('woff2'); 
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-  
+font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/RobotoBlack/Roboto-Black.woff") format("woff");
+  src: url("../fonts/Roboto/RobotoBlack/Roboto-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
+font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/RobotoRegular/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto/RobotoRegular/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-display: swap; }

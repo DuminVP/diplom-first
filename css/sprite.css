@@ -1,28 +1,19 @@
 a.sprite {
-    background-image: url(../img/instagram-social-network-logo-of-photo-camera.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    transition: all 0.3s ease-out;
-}
-
-a.sprite.vk {
-    background-position: 0px top;
-}
-
-a.sprite.facebook-logo {
-    background-position: -55px top;
-}
-
-a.sprite.twitter-logo-silhouette {
-    background-position: -107px top;
-}
-
-a.sprite.instagram-social {
-    background-position: -163px top;
-}
-
-a.sprite:hover {
-    background-position-y: bottom;
-}
+  background-image: url(../img/instagram-social-network-logo-of-photo-camera.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  a.sprite.vk {
+    background-position: 0px top; }
+  a.sprite.facebook-logo {
+    background-position: -55px top; }
+  a.sprite.twitter-logo-silhouette {
+    background-position: -107px top; }
+  a.sprite.instagram-social {
+    background-position: -163px top; }
+  a.sprite:hover {
+    background-position-y: bottom; }

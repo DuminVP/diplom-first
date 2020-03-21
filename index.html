@@ -4,31 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Дипломный проект</title>
-		<link rel="stylesheet" type="text/css" href="css/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" type="text/css" href="css/header.css">
-		<link rel="stylesheet" type="text/css" href="css/libs.css">
-		<link rel="stylesheet" type="text/css" href="css/libs.min.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/media.css">
-		<link rel="stylesheet" type="text/css" href="css/modal.css">
-		<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-		<link rel="stylesheet" type="text/css" href="css/slick.css">
-		<link rel="stylesheet" type="text/css" href="css/slick2.css">
-		<link rel="stylesheet" type="text/css" href="css/sprite.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 
 		<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="preload" href="fonts/Roboto/RobotoBlack/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="fonts/Roboto/RobotoRegular/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="fonts/Roboto/RobotoBold/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
 		<link rel="icon" type="image/ico" sizes="16x16" href="img/favicon.ico">
 		<link rel="shortcut icon" href="img/favicon.ico">
 
-		<script src="js/jquery-3.4.1.min.js"></script>       
-		<script src="js/jquery.min.js"></script>
+		<script src="js/libs.min.js"></script>       
 	</head>
 	<body>
 <!-- Хедер -->
@@ -44,13 +28,13 @@
 					<nav class="header-menu">
 						<ul class="nav-list">
 							<li>
-								<a class="link nav-list__link" href="#" title="Services">Услуги</a>
+								<a class="link nav-list__link" href="#services" title="Services">Услуги</a>
 							</li>
 							<li>
-								<a class="link nav-list__link" href="#" title="Portfolio">Портфолио</a>
+								<a class="link nav-list__link" href="#portfolio" title="Portfolio">Портфолио</a>
 							</li>
 							<li>
-								<a class="link nav-list__link" href="#" title="Cost">Стоимость</a>
+								<a class="link nav-list__link" href="#cost" title="Cost">Стоимость</a>
 							</li>
 						</ul>
           			</nav>          
@@ -74,13 +58,13 @@
 					<nav class="header-mobile-menu hidden">
 						<ul class="mobile-nav-list">
 							<li>
-								<a class="link mobile-nav-list__link" href="#" title="Services">Услуги</a>
+								<a class="link mobile-nav-list__link" href="#services" title="Services">Услуги</a>
 							</li>
 							<li>
-								<a class="link mobile-nav-list__link" href="#" title="Portfolio">Портфолио</a>
+								<a class="link mobile-nav-list__link" href="#portfolio" title="Portfolio">Портфолио</a>
 							</li>
 							<li>
-								<a class="link mobile-nav-list__link" href="#" title="Cost">Стоимость</a>
+								<a class="link mobile-nav-list__link" href="#cost" title="Cost">Стоимость</a>
 							</li>
 						</ul>
           			</nav>           
@@ -92,9 +76,9 @@
 					<span class="header-menu__button_cross modal__cross js-modal-close close1" aria-label="Close"></span>
 					<p class="modal_title">Заказать звонок!</p>
 					<p class="modal_subtitle">Оставьте заявку и я свяжусь с вами в ближайшее время</p> 
-					<form class="form_modal_window" action="#">
-						<input class="modal__name" type="text" name="name" placeholder="Ваше имя" aria-label="Your name" required>
-						<input class="modal__phone" name="phone" placeholder="Ваш телефон" aria-label="Your phone number" required>
+					<form class="form_modal_window" action="mail.php" method="POST" id="form_1">
+						<input class="modal__name" type="text" name="user_name" placeholder="Ваше имя" aria-label="Your name" required>
+						<input class="modal__phone" name="user_phone" placeholder="+7 (999) 99 99 999" aria-label="Your phone number" required>
 						<input class="btn header-button__telefon" name="sub" type="submit" value="Отправить" aria-label="Send">
 					</form>
 					<span class="foto-section__number-sign_modal">&#35;</span>
@@ -107,10 +91,10 @@
 					<span class="header-menu__button_cross modal__cross js-modal-close close1"></span>
 					<p class="modal_title">Узнать больше!</p>
 					<p class="modal_subtitle">Оставьте заявку и я свяжусь с вами в ближайшее время</p> 
-					<form class="form_modal_window" action="#">
-						<input class="modal__name_2" type="text" name="name" placeholder="Ваше имя" aria-label="Your name" required>
-						<input class="modal__email_2" type="email" name="email" placeholder="Ваш email" aria-label="Your email" required>
-						<input class="modal__phone_2" name="phone" placeholder="Ваш телефон" aria-label="Your phone number" required>
+					<form class="form_modal_window" action="mail.php" method="POST" id="form_2">
+						<input class="modal__name_2" name="user_name" type="text" placeholder="Ваше имя" aria-label="Your name" required>
+						<input class="modal__email_2" name="user_email" type="email"  placeholder="Ваш email" aria-label="Your email" required>
+						<input class="modal__phone_2" name="user_phone" placeholder="Ваш телефон" aria-label="Your phone number" required>
 						<input class="btn red-button" name="sub" type="submit" value="Отправить" aria-label="Send">
 					</form>
 					<span class="foto-section__number-sign_modal">&#35;</span>
@@ -120,6 +104,13 @@
 				</div>
 				<!-- Подложка под модальным окном -->
 				<div class="overlay js-overlay-modal"></div>
+
+				<div class="overlay js-overlay-thank-you">
+					<div class="popup js-thank-you">
+						<h2>Спасибо за заявку</h2>
+						<div class="close-popup js-close-thank-you"></div>
+					</div>
+				</div>
 			</div>
 		</header>
 <!-- Основная часть -->
@@ -169,7 +160,7 @@
 				<button class="btn red-button js-open-modal" aria-label="To learn more" data-modal="2">Узнать больше</button>
 			</section>
 
-			<section class="skils-section">
+			<section class="skils-section" id="services">
 				<div class="wrap">
 					<div class="heading">
 						<h3 class="heading__title">Что я делаю</h3>
@@ -206,7 +197,7 @@
 				</div>
       		</section>
       
-			<section class="project-section">
+			<section class="project-section" id="portfolio">
 				<div class="wrap">
 					<div class="heading">
 						<h3 class="heading__title">Примеры моих работ</h3>
@@ -241,7 +232,7 @@
 				</div>
 			</section>
 
-			<section class="adaptiv-section">
+			<section class="adaptiv-section" id="cost">
 				<div class="wrap">
 					<div class="adaptiv-text">
 						<h2 class="adaptiv-text__text">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
@@ -265,13 +256,13 @@
 							<nav class="footer-menu">
 								<ul>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#" title="Services">Услуги</a>
+										<a class="footer-item__link" href="#services" title="Services">Услуги</a>
 									</li>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#" title="Portfolio">Портфолио</a>
+										<a class="footer-item__link" href="#portfolio" title="Portfolio">Портфолио</a>
 									</li>
 									<li class="footer-item">
-										<a class="footer-item__link" href="#" title="Cost">Стоимость</a>
+										<a class="footer-item__link" href="#cost" title="Cost">Стоимость</a>
 									</li>
 								</ul>
 							</nav>
@@ -310,9 +301,11 @@
 				<p class="footer-bottom__text">&copy;&nbsp;Вячеслав&nbsp;Думин,&nbsp;2019&nbsp;-&nbsp;2020</p>
 			</div>			
 		</footer>
+		<script src="js/jquery.maskedinput.js"></script>
+		<script src="js/modal-mask.js"></script>
+		<script src="js/scrolling.js"></script>
 		<script src="js/menu-button.js"></script>
 		<script src="js/modal.js"></script>
 		<script src="js/slick.js"></script>
-		<script src="js/slick.min.js"></script>	
 	</body>
 </html>
